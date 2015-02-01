@@ -1,5 +1,16 @@
 source "https://rubygems.org"
-gem("nokogiri")
-gem("rspec")
-gem("pry")
-gem("pg")
+
+gem 'sinatra'
+gem "sinatra-contrib", :require => "sinatra/reloader"
+gem "sinatra-activerecord"
+gem "rake"
+gem "nokogiri"
+gem "pry"
+gem "pg"
+
+
+
+group(:test) do
+  gem "rspec"
+  gem "shoulda-matchers"
+end
